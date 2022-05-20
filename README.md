@@ -5,7 +5,6 @@
 - Build a React single page application from scratch
 - Apply your knowledge of components, props and state management
 - Incorporate client-side routing
-- Use data from an API
 
 ## Introduction
 
@@ -16,34 +15,37 @@ This assignment is open-ended when it comes to the actual content. You are free
 to create whatever you'd like, as long as it incorporates the requirements
 listed in these instructions.
 
-## Requirements
+## Minimum Project Requirements
 
 1. You must make a single page application (only one `index.html` file) using
    `create-react-app`.
-2. Your app should use at least 5 components in a way that keeps your code well
+2. Your app should use at least 3 components in a way that keeps your code well
    organized.
-3. There should be at least 3 client-side routes using [React
+3. There should be at least 2 client-side routes using [React
    Router][react-router]. Be sure to include a nav bar or other UI element that
    allows users to navigate between routes.
 4. Use a `json-server` to create a RESTful API for your backend and make both a
    `GET` and a `POST` request to the json server. Use a form to make your post
-   request, specifically a controlled form/component. Additionally, you may
-   choose to incorporate data from an external API but it is not required.
+   request, specifically a controlled form/component.
    - You should keep your `json-server` data simple: avoid nested data and
      associations. You'll learn how to work with more complex data in the next
      two phases. Focus on the frontend for this project.
-5. Add some styling: you're encouraged to write your CSS from scratch, either by
+
+### Expand Your Project (Optional)
+
+If you have the time, continue to build out your project in one or more (or
+all!) of the following ways:
+
+1. Include 5 or more components, and 3 or more client-side routes, in your
+   application.
+2. Incorporate data from an external API. Check out [this list of APIs][APIs] if
+   you need some inspiration!
+3. Add some styling: you're encouraged to write your CSS from scratch, either by
    using [styled components][] or writing CSS files and using id/className to
    style your elements. You can also incorporate a UI framework (like [React
    Bootstrap][react-bootstrap], [Semantic UI][semantic-ui], or [Material
    UI][material-ui]) if you prefer.
-
-### Stretch Goals
-
-Once you have met the minimum requirements, feel free to explore! These are only
-the basic requirements — you're free to add on as much stuff as you'd like. For
-example, you may want to incorporate data from an external API. Check out [this
-list of APIs][APIs] if you need some inspiration!
+4. Deploy your app! (See the "Deploying" section below for instructions.)
 
 ## Setup
 
@@ -53,8 +55,8 @@ should you choose to do so.
 
 ### Frontend Setup
 
-Use `create-react-app` to generate starter code for your your project. Follow
-the instructions on the [create-react-app] site to get started.
+Use `create-react-app` to generate starter code for your project. Follow the
+instructions on the [create-react-app] site to get started.
 
 [create-react-app]: https://create-react-app.dev/docs/getting-started
 
@@ -66,7 +68,7 @@ this template will make it easier to deploy your backend later on.
 [json-server template]: https://github.com/learn-co-curriculum/json-server-template
 
 If you prefer, instead of using the template, you can create a `db.json` file
-with a structure in the root of your project that looks like this:
+in the root of your project with a structure that looks like this:
 
 ```json
 {
@@ -108,7 +110,7 @@ You can consult the [json-server docs][] for more information.
 
 [json-server docs]: https://www.npmjs.com/package/json-server
 
-## Deploying
+## [Optional] Deploying
 
 When your project is complete, you are encouraged to deploy it! You'll need to
 deploy your frontend and backend repos to their own standalone servers.
@@ -130,7 +132,7 @@ specified here:
 
 - [Netlify Redirects](https://docs.netlify.com/routing/redirects/)
 
-Your redirects file should be placed in the public folder. It look like this:
+Your redirects file should be placed in the public folder. It looks like this:
 
 ```txt
 /*    /index.html   200
@@ -149,7 +151,7 @@ You'll likely have some variables that change depending on what environment
 you're working in. For example, after deploying your site to production, you
 won't be able to access your backend on `localhost` anymore.
 
-To handle these kind of **environment variables**, we can use `.env` files.
+To handle these kinds of **environment variables**, we can use `.env` files.
 
 `create-react-app` has some tools for working with `.env` files that you can
 read about here:
@@ -200,7 +202,7 @@ CSS, and other assets from the `src` directory and optimize them by **bundling**
 (merging files together) and **minifying** (shortening the lines of code) so
 that the files load as fast as possible.
 
-![webpack bundle](https://hackernoon.com/hn-images/1*0V9PsiedHEzXJRlouOazZA.gif)
+![webpack bundle](https://curriculum-content.s3.amazonaws.com/phase-2/project-guidelines/webpack-bundle.gif)
 
 You can try this out on your own by running `npm run build`. This will create a
 new directory with your bundled and minified source code!
